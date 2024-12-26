@@ -14,7 +14,7 @@ class ModelPredictor:
         probability = self.model.predict_proba(image_flat)[0]
         return {
             "image_path": img_path,
-            "prediction": prediction,
+            "prediction": str(prediction),
             "probability": probability.tolist(),
         }
 
@@ -22,5 +22,4 @@ class ModelPredictor:
 if __name__ == "__main__":
     predictor = ModelPredictor("model\\svm_model.pkl")
     result = predictor.predict("dataset_images\\cat\\cat_1.jpg")
-    print(f"Prediction: {result['prediction']}")
-    print(f"Probability: {result['probability']}")
+    print(result)
