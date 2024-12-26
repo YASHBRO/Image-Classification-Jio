@@ -9,8 +9,8 @@ This project aims to build an image classification pipeline using SVM.
 ## Installation
 1. Create a virtual environment:
    ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+   python -m venv .venv
+   source .venv/bin/activate  # On Windows use `venv\Scripts\activate`
    ```
 2. Install the required dependencies:
    ```bash
@@ -50,7 +50,7 @@ uvicorn app.main:app --reload
    
     Response:
     ```json
-    {"message": "Welcome to the SVM Image Classification API"}
+    {"image_path": "dataset_images\cat\cat_1.jpg", "prediction": "cat", "probability": [0.17703761011165794, 0.293257644060069, 0.2627881483547557, 0.14008333744991586, 0.12683326002360162]}
     ```
 
 ## Usage
